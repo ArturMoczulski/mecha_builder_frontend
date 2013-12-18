@@ -1,0 +1,42 @@
+<div ng-controller="BlueprintCtrl as ctrl">
+	<dl class="mecha-blueprint">
+		<dt>Body</dt>
+		<dd class="body">
+			<dl>
+				<dt>Name</dt>
+				<dd>{{ ctrl.blueprint.body.name}}</dd>
+			</dl>
+			<dl>
+				<dt>Socket</dt>
+				<dd class="socket-groups">
+					<dl class="socket-group" ng-repeat="socket_group in ctrl.blueprint.body.socket_groups">
+						<dt>{{ socket_group.name }}</dt>
+						<dd>{{ socket_group.sockets_count }}</dd>
+					<dl>
+				</dd>
+			</dl>
+		</dd>
+		<dt>Parts</dt>
+		<dd>
+			<dl class="parts" ng-repeat="parts_group in ctrl.blueprint.parts">
+				<dt>{{ parts_group.name }}</dt>
+				<dd class="part" ng-repeat="part in parts_group">
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>SKU</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{{ part.name }}</td>
+								<td>{{ part.blueprint.sku }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</dd>
+			<dl>
+		</dd>
+	</dl>
+</div>
