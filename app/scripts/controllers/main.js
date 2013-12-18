@@ -2,4 +2,4 @@
 
 angular.module('mechaBuilderFrontendApp')
   .controller('MainCtrl', function ($scope) {
-  });
+});

@@ -7,20 +7,20 @@
 				<dd>{{ ctrl.blueprint.body.name}}</dd>
 			</dl>
 			<dl>
-				<dt>Socket</dt>
+				<dt>Sockets</dt>
 				<dd class="socket-groups">
-					<dl class="socket-group" ng-repeat="socket_group in ctrl.blueprint.body.socket_groups">
-						<dt>{{ socket_group.name }}</dt>
-						<dd>{{ socket_group.sockets_count }}</dd>
+					<dl class="socket-group" ng-repeat="socketGroup in ctrl.blueprint.body.socketGroups">
+						<dt>{{ socketGroup.name }}</dt>
+						<dd>{{ socketGroup.sockets_count }}</dd>
 					<dl>
 				</dd>
 			</dl>
 		</dd>
 		<dt>Parts</dt>
 		<dd>
-			<dl class="parts" ng-repeat="parts_group in ctrl.blueprint.parts">
-				<dt>{{ parts_group.name }}</dt>
-				<dd class="part" ng-repeat="part in parts_group">
+			<dl class="parts" ng-repeat="partsGroup in ctrl.blueprint.parts">
+				<dt>{{ partsGroup.name }}</dt>
+				<dd class="part" ng-repeat="part in partsGroup">
 					<table>
 						<thead>
 							<tr>
