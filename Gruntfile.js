@@ -349,6 +349,22 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    protractor: {
+      options: {
+        configFile: "node_modules/protractor/referencesConf.js",
+        keepAlive: true,
+        noColor: false,
+        args: {
+        }
+      },
+      development: {
+        options: {
+          configFile: "protractor-e2e.conf.js",
+          args: {}
+        }
+      }
     }
   });
 
