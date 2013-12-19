@@ -16,4 +16,8 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
+  it('should test something', function() {
+    console.log("testing something");
+  });
+
 });
