@@ -1,0 +1,24 @@
+<div ng-controller="BlueprintCtrl as ctrl">
+	<div class="mecha-blueprint-graph">
+		<div class="socket-group">
+			<div class="label">body</div>
+			<div class="body">
+				{{ blueprint.body.name }}
+			</div>
+		</div>
+		<div 
+			class="socket-group" 
+			ng-class="{{ socketGroup.type }}" 
+			ng-repeat="socketGroup in blueprint.body.socketGroups">
+
+			<div class="label">{{ socketGroup.type }}</div>
+
+			<div 
+				class="socket" 
+				ng-repeat="socket in socketGroup.sockets track by $index">
+				{{ socket.name }}&nbsp;
+			</div>
+
+		</div>
+	</div>
+</div>

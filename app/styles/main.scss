@@ -1,6 +1,7 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'compass-mixins/lib/compass';
 
 .browsehappy {
     margin: 0.2em 0;
@@ -89,3 +90,5 @@ body {
         border-bottom: 0;
     }
 }
+
+@import 'partials/blueprint-graph'

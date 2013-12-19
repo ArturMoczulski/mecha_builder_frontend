@@ -1,0 +1,36 @@
+div.mecha-blueprint-graph {
+
+  @include center-block();
+
+  div.socket-group {
+
+    text-align: center;
+    position: relative;
+
+    div.label {
+      color: $gray-light;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-size: $font-size-large;
+    }
+
+  }
+
+  div.socket {
+    @include square(100px);
+    @include border-radius();
+    border: 1px solid $thumbnail-border;
+    background-color: $gray-lighter;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  div.body {
+    @extend .socket;
+    @include square(200px);
+    @include center-block();
+  }
+
+}

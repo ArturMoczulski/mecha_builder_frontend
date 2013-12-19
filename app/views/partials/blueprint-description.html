@@ -1,15 +1,15 @@
 <div ng-controller="BlueprintCtrl as ctrl">
-	<dl class="mecha-blueprint">
+	<dl class="mecha-blueprint-description">
 		<dt>Body</dt>
 		<dd class="body">
 			<dl>
 				<dt>Name</dt>
-				<dd>{{ ctrl.blueprint.body.name}}</dd>
+				<dd>{{ blueprint.body.name}}</dd>
 			</dl>
 			<dl>
 				<dt>Sockets</dt>
 				<dd class="socket-groups">
-					<dl class="socket-group" ng-repeat="socketGroup in ctrl.blueprint.body.socketGroups">
+					<dl class="socket-group" ng-repeat="socketGroup in blueprint.body.socketGroups">
 						<dt>{{ socketGroup.name }}</dt>
 						<dd>{{ socketGroup.sockets_count }}</dd>
 					<dl>
@@ -18,7 +18,7 @@
 		</dd>
 		<dt>Parts</dt>
 		<dd>
-			<dl class="parts" ng-repeat="partsGroup in ctrl.blueprint.parts">
+			<dl class="parts" ng-repeat="partsGroup in blueprint.parts">
 				<dt>{{ partsGroup.name }}</dt>
 				<dd class="part" ng-repeat="part in partsGroup">
 					<table>
